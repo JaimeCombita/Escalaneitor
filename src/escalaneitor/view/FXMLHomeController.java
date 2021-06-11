@@ -7,6 +7,8 @@ package escalaneitor.view;
 
 import escalaneitor.Escalaneitor;
 import static escalaneitor.Escalaneitor.main;
+import escalaneitor.controller.GeneratorQuestion;
+import escalaneitor.model.ModelQuestionEasy;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -42,7 +44,8 @@ public class FXMLHomeController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        System.out.println("Dio Clic en boton iniciar");
+        GeneratorQuestion q = new GeneratorQuestion();
+        q.generateQuestionEasy();
         ProgramaPrincipal.nuevaVentana(event);
     }
     
