@@ -8,10 +8,6 @@ import javafx.scene.image.ImageView;
  * @author Robert
  */
 public class Niveles {
-
-    private static Object getChildren() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     // atributos 
     boolean respuestaSeleccionada=false;
     int nivelActual=0;
