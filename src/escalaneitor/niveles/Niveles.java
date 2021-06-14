@@ -9,7 +9,7 @@ import javafx.scene.image.ImageView;
  */
 public class Niveles {
     // atributos 
-    boolean respuestaSeleccionada=false;
+    boolean respuestaSeleccionada;
     int nivelActual=0;
     Image abierto = new Image(getClass().getResourceAsStream("resources/abierto.png"));    
     Image bloqueado = new Image(getClass().getResourceAsStream("resources/bloqueado.png"));
@@ -54,4 +54,3 @@ public class Niveles {
         }
     }   
 }
-
