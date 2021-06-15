@@ -15,6 +15,13 @@ import escalaneitor.model.ModelQuestionHard;
  */
 public class CalculateResult {
     
+    /**
+     * este metodo calcula el resultado de una operacion con dificultad facil 
+     * es decir 2 terminos y un operador
+     * @param oper es de tipo ModelQuestionEasy el cual tiene los 2 terminos numericos double y 
+     * un operador aritmetico
+     * @return es el resultado de la operacion entre los terminos, de tipo double
+     */
     public double calculateResultEasy(ModelQuestionEasy oper){
         switch (oper.getOperator()){
             case "+":
@@ -33,6 +40,13 @@ public class CalculateResult {
         return oper.getResult();
     }
     
+    /**
+     * este metodo calcula el resultado de una operacion con dificultad media 
+     * es decir 3 terminos y 2 operadores
+     * @param oper es de tipo ModelQuestionHalf el cual tiene los 3 terminos numericos double y 
+     * dos operadores aritmeticos
+     * @return es el resultado de la operacion entre los terminos, de tipo double
+     */
     public double calculateResultHalf(ModelQuestionHalf oper){
         switch (oper.getOperator1()){
             case "+":
@@ -99,6 +113,13 @@ public class CalculateResult {
         return oper.getResult();
     }
     
+    /**
+     * este metodo calcula el resultado de una operacion con dificultad alta 
+     * es decir 4 terminos y 3 operadores
+     * @param oper es de tipo ModelQuestionHard el cual tiene los 4 terminos numericos double y 
+     * tres operadores aritmeticos
+     * @return es el resultado de la operacion entre los terminos, de tipo double
+     */
     public double calculateResultHard(ModelQuestionHard oper){
         switch (oper.getOperator1()){
             case "+":
