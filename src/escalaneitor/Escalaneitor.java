@@ -5,6 +5,7 @@
  */
 package escalaneitor;
 
+import escalaneitor.controller.GeneratorQuestion;
 import escalaneitor.view.FXMLHomeController;
 import escalaneitor.view.FXMLLevelsController;
 import java.io.IOException;
