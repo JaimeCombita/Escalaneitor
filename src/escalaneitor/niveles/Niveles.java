@@ -8,16 +8,37 @@ import javafx.scene.image.ImageView;
  * @author Robert
  */
 public class Niveles {
-    // atributos 
-    boolean respuestaSeleccionada;
-    int nivelActual=0;
-    Image abierto = new Image(getClass().getResourceAsStream("resources/abierto.png"));    
-    Image bloqueado = new Image(getClass().getResourceAsStream("resources/bloqueado.png"));
-    Image superado = new Image(getClass().getResourceAsStream("resources/superado.png"));
+    /**
+     * atributos que se usan en la clase junto con los metodos getter y setter
+    */
+    final Image abierto = new Image(getClass().getResourceAsStream("resources/abierto.png"));    
+    final Image bloqueado = new Image(getClass().getResourceAsStream("resources/bloqueado.png"));
+    final Image superado = new Image(getClass().getResourceAsStream("resources/superado.png"));
+    
+    private boolean respuestaSeleccionada;
+    
+    private int nivelActual = 0;
+
+    public boolean isRespuestaSeleccionada() {
+        return respuestaSeleccionada;
+    }
+
+    public void setRespuestaSeleccionada(boolean respuestaSeleccionada) {
+        this.respuestaSeleccionada = respuestaSeleccionada;
+    }
+
+    public int getNivelActual() {
+        return nivelActual;
+    }
+
+    public void setNivelActual(int nivelActual) {
+        this.nivelActual = nivelActual;
+    }
     
     
-    
-    // metodo para Siguiente Nivel
+    /** 
+     * metodo para asignar el Siguiente Nivel, dependiendo de la valides de la respuesta
+    */
     public void sigNivel (){
         if (respuestaSeleccionada == true) {
             nivelActual = nivelActual + 1;
@@ -25,7 +46,9 @@ public class Niveles {
         }
     }
     
-    // metodo para iniciar todos los niveles en bloqueado excento el primero
+    /** 
+     * metodo para iniciar todos los niveles en bloqueado excepto el primero
+    */
     public void estadoInicial (){
         for (int i = 0; i < 15; i++) {
             if (nivelActual == 0) {
@@ -38,14 +61,18 @@ public class Niveles {
         }
     }
     
-    // metodo para colocar imagen de nivel superado
+    /** 
+     * metodo para colocar imagen de nivel superado
+    */
     public void nivelSuperado (){
         if (respuestaSeleccionada == true) {
             ImageView estadoSuperado = new ImageView(superado);    
         }
     }
     
-    // metodo para colocar imagen de nivel abierto al siguiente nivel
+    /** 
+     * metodo para colocar imagen de nivel abierto al siguiente nivel
+    */ 
     public void nivelAbierto (){ 
         if (respuestaSeleccionada == true) {
             //seleccionamos el siguiente nivel

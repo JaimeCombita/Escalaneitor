@@ -9,6 +9,11 @@ package escalaneitor.model;
  *
  * @author jaicom025
  */
+
+/**
+ * esta clase hace referencia al objeto que modela las preguntas de dificultad media
+ * contiene los atributos junto con sus respectivos metodos getter y setter
+ */
 public class ModelQuestionHalf {
     
     private double term1;
