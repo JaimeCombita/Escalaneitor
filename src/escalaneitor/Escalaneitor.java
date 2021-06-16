@@ -7,6 +7,7 @@ package escalaneitor;
 
 import escalaneitor.view.FXMLHomeController;
 import escalaneitor.view.FXMLLevelsController;
+import escalaneitor.view.puntos;
 import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
@@ -43,6 +44,8 @@ public class Escalaneitor extends Application {
     }
     
     public void mostrarVentanaPrincipal() {
+        puntos.crear()
+
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("view/FXMLHome.fxml"));
             
@@ -84,6 +87,7 @@ public class Escalaneitor extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+      
     }
     
 }
