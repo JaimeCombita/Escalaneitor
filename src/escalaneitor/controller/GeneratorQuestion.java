@@ -24,7 +24,7 @@ public class GeneratorQuestion {
     /**
      * Instancia de la clase calculateResult para calcular el resultado de las operaciones generadas
      */
-    CalculateResult resultado;
+    CalculateResult resultado = new CalculateResult();
     
     /**
      * este metodo se encarga de generar la pregunta de dificultad baja
@@ -80,7 +80,7 @@ public class GeneratorQuestion {
      * @return Retorna una cadena de tipo String la cual contiene el caracter que corresponde con el operador
      */
     private String generateOperatorRandom(){
-        int indexOperator = (int) Math.floor(Math.random()*6);
+        int indexOperator = (int) Math.floor(Math.random()*4);
         return OPERATORS[indexOperator];
     }
     

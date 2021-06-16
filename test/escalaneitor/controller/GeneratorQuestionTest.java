@@ -45,13 +45,11 @@ public class GeneratorQuestionTest {
      */
     @Test
     public void testGenerateQuestionEasy() {
-        System.out.println("generateQuestionEasy");
+        System.out.println("Inicia Test generateQuestionEasy");
         GeneratorQuestion instance = new GeneratorQuestion();
-        ModelQuestionEasy expResult = null;
         ModelQuestionEasy result = instance.generateQuestionEasy();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("RESULTADO GENERACION PREGUNTA FACIL  -->>  "+result.getTerm1());
+        assertNotNull(result);
     }
 
     /**
@@ -59,13 +57,10 @@ public class GeneratorQuestionTest {
      */
     @Test
     public void testGenerateQuestionHalf() {
-        System.out.println("generateQuestionHalf");
+        System.out.println("Iniciando test generateQuestionHalf");
         GeneratorQuestion instance = new GeneratorQuestion();
-        ModelQuestionHalf expResult = null;
         ModelQuestionHalf result = instance.generateQuestionHalf();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertNotNull(result);
     }
 
     /**
@@ -73,13 +68,10 @@ public class GeneratorQuestionTest {
      */
     @Test
     public void testGenerateQuestionHard() {
-        System.out.println("generateQuestionHard");
+        System.out.println("Inicia test generateQuestionHard");
         GeneratorQuestion instance = new GeneratorQuestion();
-        ModelQuestionHard expResult = null;
         ModelQuestionHard result = instance.generateQuestionHard();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertNotNull(result);
     }
     
 }

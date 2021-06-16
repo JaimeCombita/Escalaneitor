@@ -23,6 +23,7 @@ public class CalculateResult {
      * @return es el resultado de la operacion entre los terminos, de tipo double
      */
     public double calculateResultEasy(ModelQuestionEasy oper){
+        System.out.println("OPERATOR RESULT EASY -->> "+oper.getOperator());
         switch (oper.getOperator()){
             case "+":
                 oper.setResult(oper.getTerm1() + oper.getTerm2());
@@ -37,6 +38,7 @@ public class CalculateResult {
                 oper.setResult(oper.getTerm1() * oper.getTerm2());
                 break;
         }
+        System.out.println("RESULTADO CALC EASY  -->>  "+oper.getResult());
         return oper.getResult();
     }
     
@@ -68,6 +70,7 @@ public class CalculateResult {
                 switch (oper.getOperator2()) {
                     case "+":
                         oper.setResult(oper.getTerm1() - oper.getTerm2() + oper.getTerm3());
+                        System.out.println("RESULTADO EN OPERACION DE CALCULO  -->>>   "+oper.getResult());
                         break;
                     case "-":
                         oper.setResult(oper.getTerm1() - oper.getTerm2() - oper.getTerm3());
