@@ -42,13 +42,12 @@ public class ModelQuestionEasyTest {
      */
     @Test
     public void testGetTerm1() {
-        System.out.println("getTerm1");
+        System.out.println("Inicia Test getTerm1 ModelQuestionsEasy");
         ModelQuestionEasy instance = new ModelQuestionEasy();
-        double expResult = 0.0;
+        double expResult = 10.0;
+        instance.setTerm1(expResult);
         double result = instance.getTerm1();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -56,12 +55,12 @@ public class ModelQuestionEasyTest {
      */
     @Test
     public void testSetTerm1() {
-        System.out.println("setTerm1");
-        double term1 = 0.0;
+        System.out.println("Inicia Test setTerm1 ModelQuestionsEasy");
+        double term1 = 35.0;
         ModelQuestionEasy instance = new ModelQuestionEasy();
         instance.setTerm1(term1);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        double result = instance.getTerm1();
+        assertEquals(term1, result, 0.0);
     }
 
     /**
@@ -69,13 +68,11 @@ public class ModelQuestionEasyTest {
      */
     @Test
     public void testGetTerm2() {
-        System.out.println("getTerm2");
+        System.out.println("Inicia Test getTerm2 ModelQuestionsEasy");
         ModelQuestionEasy instance = new ModelQuestionEasy();
         double expResult = 0.0;
         double result = instance.getTerm2();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -83,12 +80,12 @@ public class ModelQuestionEasyTest {
      */
     @Test
     public void testSetTerm2() {
-        System.out.println("setTerm2");
-        double term2 = 0.0;
+        System.out.println("Inicia Test setTerm2 ModelQuestionsEasy");
+        double term2 = 63.0;
         ModelQuestionEasy instance = new ModelQuestionEasy();
         instance.setTerm2(term2);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        double result = instance.getTerm2();
+        assertEquals(result, term2, 0.0);
     }
 
     /**
@@ -96,13 +93,12 @@ public class ModelQuestionEasyTest {
      */
     @Test
     public void testGetOperator() {
-        System.out.println("getOperator");
+        System.out.println("Inicia Test getOperator ModelQuestionsEasy");
         ModelQuestionEasy instance = new ModelQuestionEasy();
-        String expResult = "";
+        String expResult = "+";
+        instance.setOperator(expResult);
         String result = instance.getOperator();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -110,12 +106,12 @@ public class ModelQuestionEasyTest {
      */
     @Test
     public void testSetOperator() {
-        System.out.println("setOperator");
-        String operator = "";
+        System.out.println("Inicia Test setOperator ModelQuestionsEasy");
+        String operator = "/";
         ModelQuestionEasy instance = new ModelQuestionEasy();
         instance.setOperator(operator);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        String result = instance.getOperator();
+        assertEquals(result, operator);
     }
 
     /**
@@ -123,13 +119,12 @@ public class ModelQuestionEasyTest {
      */
     @Test
     public void testGetResult() {
-        System.out.println("getResult");
+        System.out.println("Inicia Test getResult ModelQuestionsEasy");
         ModelQuestionEasy instance = new ModelQuestionEasy();
-        double expResult = 0.0;
+        double expResult = 226.0;
+        instance.setResult(expResult);
         double result = instance.getResult();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -137,12 +132,12 @@ public class ModelQuestionEasyTest {
      */
     @Test
     public void testSetResult() {
-        System.out.println("setResult");
-        double result_2 = 0.0;
+        System.out.println("Inicia Test setResult ModelQuestionsEasy");
+        double result_2 = 408.0;
         ModelQuestionEasy instance = new ModelQuestionEasy();
         instance.setResult(result_2);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        double result = instance.getResult();
+        assertEquals(result, result_2, 0.0);
     }
     
 }

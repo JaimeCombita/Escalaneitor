@@ -45,14 +45,15 @@ public class CalculateResultTest {
      */
     @Test
     public void testCalculateResultEasy() {
-        System.out.println("calculateResultEasy");
-        ModelQuestionEasy oper = null;
+        System.out.println("inicia test  calculateResultEasy");
+        ModelQuestionEasy oper = new ModelQuestionEasy();
+        oper.setTerm1(5);
+        oper.setTerm2(19);
+        oper.setOperator("+");
         CalculateResult instance = new CalculateResult();
-        double expResult = 0.0;
+        double expResult = (5+19);
         double result = instance.calculateResultEasy(oper);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -60,14 +61,19 @@ public class CalculateResultTest {
      */
     @Test
     public void testCalculateResultHalf() {
-        System.out.println("calculateResultHalf");
-        ModelQuestionHalf oper = null;
+        System.out.println("inicia test calculateResultHalf");
+        ModelQuestionHalf oper = new ModelQuestionHalf();
+        oper.setTerm1(6);
+        oper.setTerm1(9);
+        oper.setTerm1(2);
+        oper.setOperator1("-");
+        oper.setOperator2("+");
         CalculateResult instance = new CalculateResult();
-        double expResult = 0.0;
+        double expResult = (6-9+2);
+        System.out.println("EXP_RESULTADO CALC HARD  -->>  "+expResult);
         double result = instance.calculateResultHalf(oper);
+        System.out.println("EXP_RESULTADO CALC HARD  -->>  "+result);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -76,13 +82,20 @@ public class CalculateResultTest {
     @Test
     public void testCalculateResultHard() {
         System.out.println("calculateResultHard");
-        ModelQuestionHard oper = null;
+        ModelQuestionHard oper = new ModelQuestionHard();
+        oper.setTerm1(8);
+        oper.setTerm2(5);
+        oper.setTerm3(9);
+        oper.setTerm4(2);
+        oper.setOperator1("+");
+        oper.setOperator2("+");
+        oper.setOperator3("+");
         CalculateResult instance = new CalculateResult();
-        double expResult = 0.0;
+        double expResult = (8+5+9+2);
+        //System.out.println("EXP_RESULTADO CALC HARD  -->>  "+expResult);
         double result = instance.calculateResultHard(oper);
+        //System.out.println("RESULTADO CALC HARD  -->>  "+result);
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
