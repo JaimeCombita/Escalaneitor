@@ -61,7 +61,7 @@ public class Escalaneitor extends Application {
             rootPane = (AnchorPane) loader.load();
             Scene scene = new Scene(rootPane);
             stagePrincipal.setTitle("Escalaneitor - Inicio");
-            stagePrincipal.getIcons().add(new Image("file:resources/icon-app.png"));
+            stagePrincipal.getIcons().add(new Image("file:resources/palanca-de-mando.png"));
             stagePrincipal.setScene(scene);
             FXMLHomeController controller = loader.getController();
             controller.setProgramaPrincipal(this);
