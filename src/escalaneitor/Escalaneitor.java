@@ -9,13 +9,12 @@ import escalaneitor.view.FXMLHomeController;
 import escalaneitor.view.FXMLLevelsController;
 import java.io.IOException;
 import javafx.application.Application;
+import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 /**
@@ -24,11 +23,22 @@ import javafx.stage.Stage;
  */
 public class Escalaneitor extends Application {
     
+    /**
+     * variables que son utilizadas para reemplazar los Scene y mostrar las dferentes escenas 
+     * segun flujo en que se encuentre en el juego
+     */
     private Stage stagePrincipal;
     private AnchorPane rootPane;
     
     @Override
+    /**
+     * Este metodo es por donde inicia el juego
+     */
     public void start(Stage stage) throws Exception {
+        /**
+         * aqui seteamos el valor del stage y hacemos el llamado al metodo mostrarVentanaPrincipal
+         * que se encarga de mostrar el escenario
+         */
         this.stagePrincipal = stage;
         mostrarVentanaPrincipal();
         
@@ -42,13 +52,13 @@ public class Escalaneitor extends Application {
         //stage.show();
     }
     
+    /**
+     * este metodo se encarga de mostrar la ventana principal del juego, asignar titulo e icono
+     */
     public void mostrarVentanaPrincipal() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("view/FXMLHome.fxml"));
-            
-            
             rootPane = (AnchorPane) loader.load();
-            
             Scene scene = new Scene(rootPane);
             stagePrincipal.setTitle("Escalaneitor - Inicio");
             stagePrincipal.getIcons().add(new Image("file:resources/icon-app.png"));
@@ -57,10 +67,13 @@ public class Escalaneitor extends Application {
             controller.setProgramaPrincipal(this);
             stagePrincipal.show();
         } catch (IOException e) {
-            //tratar la excepción.
+            System.out.println("Error al abrir la mostrar ventana principal  -->>  "+e.getMessage());
         }
-   }
+    }
     
+    /**
+     * este metodo muestra la ventana de niveles para ver el progreso del juego
+     */
     public void nuevaVentana(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(Escalaneitor.class.getResource("view/FXMLLevels.fxml"));
@@ -74,8 +87,8 @@ public class Escalaneitor extends Application {
             controller.setStagePrincipal(ventana);
             ventana.show();
  
-        } catch (Exception e) {
-            //tratar la excepción
+        } catch (IOException e) {
+            System.out.println("Error al abrir la nueva ventana  -->>  "+e.getMessage());
         }
     }
 
