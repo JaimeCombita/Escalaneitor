@@ -16,8 +16,26 @@
     -fx-background-size: 100% 100%;
 }
 
+.button-question {
+    -fx-background-color: #1B0652;
+}
+
+.button-levels {
+    -fx-background-color: #1B0652;
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
 .button-home {
   -fx-background-image: url('file:resources/boton-iniciar.png');
+  -fx-background-size: 100% 100%;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+.button-back {
+  -fx-background-image: url('file:resources/b-volver.png');
   -fx-background-size: 100% 100%;
   -fx-background-repeat: no-repeat;
   -fx-background-position: center;
@@ -37,107 +55,7 @@
   -fx-background-position: center;
 }
 
-.btn-level1 {
-  -fx-background-image: url('file:resources/nivel1/1.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level2 {
-  -fx-background-image: url('file:resources/nivel2/2.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level3 {
-  -fx-background-image: url('file:resources/nivel3/3.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level4 {
-  -fx-background-image: url('file:resources/nivel4/4.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level5 {
-  -fx-background-image: url('file:resources/nivel5/5.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level6 {
-  -fx-background-image: url('file:resources/nivel6/6.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level7 {
-  -fx-background-image: url('file:resources/nivel7/7.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level8 {
-  -fx-background-image: url('file:resources/nivel8/8.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level9 {
-  -fx-background-image: url('file:resources/nivel9/9.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level10 {
-  -fx-background-image: url('file:resources/nivel10/10.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level11 {
-  -fx-background-image: url('file:resources/nivel11/11.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level12 {
-  -fx-background-image: url('file:resources/nivel12/12.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level13 {
-  -fx-background-image: url('file:resources/nivel13/13.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level14 {
-  -fx-background-image: url('file:resources/nivel14/14.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
-}
-
-.btn-level15 {
-  -fx-background-image: url('file:resources/nivel15/15.png');
-  -fx-background-size: 100% 100%;
-  -fx-background-repeat: no-repeat;
-  -fx-background-position: center;
+.label-question {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
 }

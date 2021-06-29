@@ -6,7 +6,7 @@
 package escalaneitor.view;
 
 import escalaneitor.Escalaneitor;
-import escalaneitor.controller.GeneratorQuestion;
+import escalaneitor.controller.FileLevels;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -27,7 +27,9 @@ public class FXMLHomeController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        FileLevels txt = new FileLevels();
+        txt.inicializarArchivoNivel();
+        txt.escribirNivelArchivo("1");
     }
  
     public void setProgramaPrincipal(Escalaneitor ProgramaPrincipal) {
@@ -36,10 +38,7 @@ public class FXMLHomeController implements Initializable {
     
     @FXML
     private void startGame(ActionEvent event) {
-        GeneratorQuestion q = new GeneratorQuestion();
-        q.generateQuestionEasy();
-        ProgramaPrincipal.nuevaVentana(event);
-        //ProgramaPrincipal.ventanaQuestions(event);
+        ProgramaPrincipal.mostrarVentanaLevels(event);
     }
     
 }

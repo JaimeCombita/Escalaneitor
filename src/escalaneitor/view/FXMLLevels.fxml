@@ -9,20 +9,20 @@
         <URL value="@styleApp.css" />
     </stylesheets>
    <children>
-      <Button fx:id="btnLevel1" layoutX="69.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level1" />
-      <Button fx:id="btnLevel11" layoutX="181.0" layoutY="365.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level2" />
-      <Button fx:id="btnLevel111" layoutX="294.0" layoutY="365.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level3" />
-      <Button fx:id="btnLevel1111" layoutX="407.0" layoutY="365.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level4" />
-      <Button fx:id="btnLevel11111" layoutX="524.0" layoutY="365.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level5" />
-      <Button fx:id="btnLevel12" layoutX="68.0" layoutY="239.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level6" />
-      <Button fx:id="btnLevel112" layoutX="180.0" layoutY="239.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level7" />
-      <Button fx:id="btnLevel1112" layoutX="294.0" layoutY="239.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level8" />
-      <Button fx:id="btnLevel11112" layoutX="406.0" layoutY="239.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level9" />
-      <Button fx:id="btnLevel111111" layoutX="523.0" layoutY="239.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level10" />
-      <Button fx:id="btnLevel13" layoutX="68.0" layoutY="109.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level11" />
-      <Button fx:id="btnLevel113" layoutX="180.0" layoutY="109.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level12" />
-      <Button fx:id="btnLevel1113" layoutX="294.0" layoutY="109.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level13" />
-      <Button fx:id="btnLevel11113" layoutX="406.0" layoutY="109.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level14" />
-      <Button fx:id="btnLevel111112" layoutX="523.0" layoutY="109.0" mnemonicParsing="false" prefHeight="78.0" prefWidth="96.0" styleClass="btn-level15" />
+      <Button fx:id="btnLevel1" alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel2" layoutX="181.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel3" layoutX="294.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel4" layoutX="407.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel5" layoutX="524.0" layoutY="365.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel6" layoutX="68.0" layoutY="239.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel7" layoutX="180.0" layoutY="239.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel8" layoutX="294.0" layoutY="239.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel9" layoutX="406.0" layoutY="239.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel10" layoutX="523.0" layoutY="239.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel11" layoutX="68.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel12" layoutX="180.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel13" layoutX="294.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel14" layoutX="406.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
+      <Button fx:id="btnLevel15" layoutX="523.0" layoutY="109.0" mnemonicParsing="false" onAction="#viewQuestion" prefHeight="78.0" prefWidth="96.0" styleClass="button-levels" />
    </children>
 </AnchorPane>

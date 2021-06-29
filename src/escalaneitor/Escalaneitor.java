@@ -6,8 +6,6 @@
 package escalaneitor;
 
 import escalaneitor.view.FXMLHomeController;
-import escalaneitor.view.FXMLLevelsController;
-import escalaneitor.view.FXMLQuestionEasyController;
 import java.io.IOException;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
@@ -45,15 +43,6 @@ public class Escalaneitor extends Application {
          */
         this.stagePrincipal = stage;
         mostrarVentanaPrincipal();
-        
-        //Parent root = FXMLLoader.load(getClass().getResource("view/FXMLHome.fxml"));
- 
-        //Scene scene = new Scene(root);
- 
-        //stage.setScene(scene);
-        //stage.setTitle("Escalaneitor");
-        //stage.getIcons().add(new Image("file:resources/icon-app.png"));
-        //stage.show();
     }
     
     /**
@@ -81,63 +70,45 @@ public class Escalaneitor extends Application {
     /**
      * este metodo muestra la ventana de niveles para ver el progreso del juego
      */
-    public void nuevaVentana(ActionEvent event) {
+    public void mostrarVentanaLevels(ActionEvent event) {
         try {
-            FXMLLoader loader = new FXMLLoader(Escalaneitor.class.getResource("view/FXMLLevels.fxml"));
-            AnchorPane ventanaDos = (AnchorPane) loader.load();
-            Stage ventana = new Stage();
-            ventana.setTitle("Escalaneitor - Niveles");
-            ventana.setWidth(700);
-            ventana.setHeight(500);
-            stagePrincipal.setResizable(false);
-            ventana.initOwner(stagePrincipal);
-            Scene scene = new Scene(ventanaDos);
-            ventana.setScene(scene);
-            FXMLLevelsController controller = loader.getController();
-            controller.setStagePrincipal(ventana);
-            ventana.show();
- 
+            Parent root = FXMLLoader.load(getClass().getResource("view/FXMLLevels.fxml"));
+            Scene scene = new Scene(root);
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage.setScene(scene);
+            appStage.toFront();
+            appStage.show();
         } catch (IOException e) {
-            System.out.println("Error al abrir la nueva ventana  -->>  "+e.getMessage());
+            System.out.println("Error al abrir la ventana levels -->>  "+e.getMessage());
+        }
+    }
+    
+    public void mostrarVentanaLevels2(ActionEvent event) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("view/FXMLLevels.fxml"));
+            Scene scene2 = new Scene(root);
+            Stage appStage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage2.setScene(scene2);
+            appStage2.toFront();
+            appStage2.show();
+        } catch (IOException e) {
+            System.out.println("Error al abrir la ventana levels2 -->>  "+e.getMessage());
         }
     }
     
     /**
-     * este metodo muestra la ventana de niveles para ver el progreso del juego
+     * este metodo muestra la ventana de preguntas 
      */
-    public void ventanaQuestions(ActionEvent event) {
+    public void mostrarVentanaQuestions(Event event) {
         try {
-            FXMLLoader loader = new FXMLLoader(Escalaneitor.class.getResource("view/FXMLQuestionEasy.fxml"));
-            AnchorPane ventanaTres = (AnchorPane) loader.load();
-            Stage ventana3 = new Stage();
-            ventana3.setTitle("Escalaneitor - Pregunta");
-            ventana3.setWidth(700);
-            ventana3.setHeight(500);
-            stagePrincipal.setResizable(false);
-            ventana3.initOwner(stagePrincipal);
-            Scene scene3 = new Scene(ventanaTres);
-            ventana3.setScene(scene3);
-            FXMLQuestionEasyController controller3 = loader.getController();
-            controller3.setStagePrincipal(ventana3);
-            ventana3.show();
- 
-        } catch (IOException e) {
-            System.out.println("Error al abrir la nueva ventana  -->>  "+e.getMessage());
-        }
-    }
-    
-    public void mostrarMenuAdministrador(Event event) {
-        try {
-
             Parent root = FXMLLoader.load(getClass().getResource("view/FXMLQuestionEasy.fxml"));
             Scene scene = new Scene(root);
             Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             appStage.setScene(scene);
             appStage.toFront();
             appStage.show();
-
         } catch (IOException e) {
-            System.out.println("Error al abrir la nueva ventana QS -->>  "+e.getMessage());
+            System.out.println("Error al abrir la ventana Questions -->>  "+e.getMessage());
         }
     }
 
