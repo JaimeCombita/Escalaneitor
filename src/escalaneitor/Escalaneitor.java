@@ -7,11 +7,15 @@ package escalaneitor;
 
 import escalaneitor.view.FXMLHomeController;
 import escalaneitor.view.FXMLLevelsController;
+import escalaneitor.view.FXMLQuestionEasyController;
 import java.io.IOException;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -57,10 +61,13 @@ public class Escalaneitor extends Application {
      */
     public void mostrarVentanaPrincipal() {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("view/FXMLHome.fxml"));
+            FXMLLoader loader = new FXMLLoader(Escalaneitor.class.getResource("view/FXMLHome.fxml"));
             rootPane = (AnchorPane) loader.load();
             Scene scene = new Scene(rootPane);
             stagePrincipal.setTitle("Escalaneitor - Inicio");
+            stagePrincipal.setWidth(700);
+            stagePrincipal.setHeight(500);
+            stagePrincipal.setResizable(false);
             stagePrincipal.getIcons().add(new Image("file:resources/icon-app.png"));
             stagePrincipal.setScene(scene);
             FXMLHomeController controller = loader.getController();
@@ -80,6 +87,9 @@ public class Escalaneitor extends Application {
             AnchorPane ventanaDos = (AnchorPane) loader.load();
             Stage ventana = new Stage();
             ventana.setTitle("Escalaneitor - Niveles");
+            ventana.setWidth(700);
+            ventana.setHeight(500);
+            stagePrincipal.setResizable(false);
             ventana.initOwner(stagePrincipal);
             Scene scene = new Scene(ventanaDos);
             ventana.setScene(scene);
@@ -89,6 +99,45 @@ public class Escalaneitor extends Application {
  
         } catch (IOException e) {
             System.out.println("Error al abrir la nueva ventana  -->>  "+e.getMessage());
+        }
+    }
+    
+    /**
+     * este metodo muestra la ventana de niveles para ver el progreso del juego
+     */
+    public void ventanaQuestions(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(Escalaneitor.class.getResource("view/FXMLQuestionEasy.fxml"));
+            AnchorPane ventanaTres = (AnchorPane) loader.load();
+            Stage ventana3 = new Stage();
+            ventana3.setTitle("Escalaneitor - Pregunta");
+            ventana3.setWidth(700);
+            ventana3.setHeight(500);
+            stagePrincipal.setResizable(false);
+            ventana3.initOwner(stagePrincipal);
+            Scene scene3 = new Scene(ventanaTres);
+            ventana3.setScene(scene3);
+            FXMLQuestionEasyController controller3 = loader.getController();
+            controller3.setStagePrincipal(ventana3);
+            ventana3.show();
+ 
+        } catch (IOException e) {
+            System.out.println("Error al abrir la nueva ventana  -->>  "+e.getMessage());
+        }
+    }
+    
+    public void mostrarMenuAdministrador(Event event) {
+        try {
+
+            Parent root = FXMLLoader.load(getClass().getResource("view/FXMLQuestionEasy.fxml"));
+            Scene scene = new Scene(root);
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage.setScene(scene);
+            appStage.toFront();
+            appStage.show();
+
+        } catch (IOException e) {
+            System.out.println("Error al abrir la nueva ventana QS -->>  "+e.getMessage());
         }
     }
 

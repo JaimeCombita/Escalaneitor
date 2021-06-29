@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" styleClass="bodybg-question" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="escalaneitor.view.FXMLQuestionEasyController">
+    <stylesheets>
+        <URL value="@styleApp.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="20.0" layoutY="14.0" text="Puntos: 0" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="555.0" layoutY="14.0" text="Nivel 1" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="36.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

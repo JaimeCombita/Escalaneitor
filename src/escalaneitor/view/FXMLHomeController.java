@@ -35,10 +35,11 @@ public class FXMLHomeController implements Initializable {
     }
     
     @FXML
-    private void handleButtonAction(ActionEvent event) {
+    private void startGame(ActionEvent event) {
         GeneratorQuestion q = new GeneratorQuestion();
         q.generateQuestionEasy();
         ProgramaPrincipal.nuevaVentana(event);
+        //ProgramaPrincipal.ventanaQuestions(event);
     }
     
 }
