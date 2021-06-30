@@ -28,8 +28,8 @@ public class FXMLHomeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         FileLevels txt = new FileLevels();
-        txt.inicializarArchivoNivel();
-        txt.escribirNivelArchivo("1");
+        //txt.inicializarArchivoNivel();
+        //txt.escribirNivelArchivo("1");
     }
  
     public void setProgramaPrincipal(Escalaneitor ProgramaPrincipal) {

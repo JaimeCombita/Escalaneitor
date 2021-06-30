@@ -9,16 +9,24 @@ import escalaneitor.Escalaneitor;
 import escalaneitor.controller.FileLevels;
 import escalaneitor.controller.GeneratorQuestion;
 import escalaneitor.model.ModelQuestionEasy;
+import java.awt.event.MouseEvent;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -43,6 +51,11 @@ public class FXMLQuestionEasyController implements Initializable {
     public Label levelQ;
     
     public String level;
+    
+    @FXML
+    private Button answer11;
+    @FXML
+    private ImageView volver;
     
     private int indexAnswer;
     private Stage stagePrincipal;
@@ -120,11 +133,29 @@ public class FXMLQuestionEasyController implements Initializable {
     
     @FXML
     private void cerrarVentana(ActionEvent event) {
-        //ProgramaPrincipal.mostrarVentanaLevels(event);
-        Node source = (Node) event.getSource();
-        Stage stage = (Stage) source.getScene().getWindow();
-        //stage.hide();
-        //stage.close();
+        try {
+            //ProgramaPrincipal.mostrarVentanaLevels(event);
+            Stage stage = (Stage) this.answer11.getScene().getWindow();
+            stage.close();
+            //stage.hide();
+            //stage.close();
+            Parent root = FXMLLoader.load(getClass().getResource("view/FXMLLevels.fxml"));
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLQuestionEasyController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @FXML
+    private void volverNiveles(MouseEvent event) throws IOException {
+        Stage stage = new Stage();
+        Parent root = FXMLLoader.load(getClass().getResource("view/FXMLLevels.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+        
     }
     
 }

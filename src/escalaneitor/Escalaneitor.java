@@ -83,19 +83,6 @@ public class Escalaneitor extends Application {
         }
     }
     
-    public void mostrarVentanaLevels2(ActionEvent event) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("view/FXMLLevels.fxml"));
-            Scene scene2 = new Scene(root);
-            Stage appStage2 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            appStage2.setScene(scene2);
-            appStage2.toFront();
-            appStage2.show();
-        } catch (IOException e) {
-            System.out.println("Error al abrir la ventana levels2 -->>  "+e.getMessage());
-        }
-    }
-    
     /**
      * este metodo muestra la ventana de preguntas 
      */
