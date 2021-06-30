@@ -25,6 +25,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Control;
 import javafx.scene.control.Label;
+import javafx.scene.control.TabPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -133,29 +134,16 @@ public class FXMLQuestionEasyController implements Initializable {
     
     @FXML
     private void cerrarVentana(ActionEvent event) {
-        try {
-            //ProgramaPrincipal.mostrarVentanaLevels(event);
-            Stage stage = (Stage) this.answer11.getScene().getWindow();
-            stage.close();
-            //stage.hide();
-            //stage.close();
-            Parent root = FXMLLoader.load(getClass().getResource("view/FXMLLevels.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
-        } catch (IOException ex) {
-            Logger.getLogger(FXMLQuestionEasyController.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        //ProgramaPrincipal.mostrarVentanaLevels(event);
+        Stage stage = (Stage) this.answer11.getScene().getWindow();
+        stage.close();
+        //stage.hide();
+        //stage.close();
     }
 
     @FXML
-    private void volverNiveles(MouseEvent event) throws IOException {
-        Stage stage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("view/FXMLLevels.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-        
+    private void volverNiveles(ActionEvent event) {
+                             
     }
     
 }
