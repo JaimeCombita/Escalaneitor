@@ -10,7 +10,8 @@
         <URL value="@styleApp.css" />
     </stylesheets>
    <children>
-      <Button layoutX="273.0" layoutY="403.0" mnemonicParsing="false" onAction="#startGame" prefHeight="53.0" prefWidth="154.0" styleClass="button-home" />
+      <Button fx:id="btnCont" layoutX="273.0" layoutY="403.0" mnemonicParsing="false" onAction="#startGame" prefHeight="53.0" prefWidth="154.0" styleClass="button-continuar" />
+      <Button fx:id="btnIniciar" layoutX="273.0" layoutY="403.0" mnemonicParsing="false" onAction="#startGame" prefHeight="53.0" prefWidth="154.0" styleClass="button-home" />
       <Label layoutX="9.0" layoutY="6.0" prefHeight="53.0" prefWidth="121.0" styleClass="label-poli" />
       <Label layoutX="23.0" layoutY="102.0" prefHeight="264.0" prefWidth="655.0" styleClass="label-name-game" />
    </children>

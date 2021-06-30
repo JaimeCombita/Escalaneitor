@@ -12,6 +12,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 
 /**
  * FXML Controller class
@@ -21,6 +22,9 @@ import javafx.fxml.Initializable;
 public class FXMLHomeController implements Initializable {
     
     private Escalaneitor ProgramaPrincipal;
+    @FXML
+    public Button btnIniciar;
+    public Button btnCont;
     /**
      * Initializes the controller class.
      */
@@ -30,6 +34,7 @@ public class FXMLHomeController implements Initializable {
         FileLevels txt = new FileLevels();
         txt.inicializarArchivoNivel();
         txt.escribirNivelArchivo("1");
+        this.btnCont.setVisible(false);
     }
  
     public void setProgramaPrincipal(Escalaneitor ProgramaPrincipal) {
@@ -38,6 +43,8 @@ public class FXMLHomeController implements Initializable {
     
     @FXML
     private void startGame(ActionEvent event) {
+        btnIniciar.setVisible(false);
+        this.btnCont.setVisible(true);
         ProgramaPrincipal.mostrarVentanaLevels(event);
     }
     

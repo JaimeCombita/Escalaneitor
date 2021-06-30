@@ -11,10 +11,12 @@ import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -72,12 +74,17 @@ public class Escalaneitor extends Application {
      */
     public void mostrarVentanaLevels(ActionEvent event) {
         try {
+                    
+            Stage stage = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("view/FXMLLevels.fxml"));
             Scene scene = new Scene(root);
-            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            appStage.setScene(scene);
-            appStage.toFront();
-            appStage.show();
+            stage.setTitle("Escalaneitor - Niveles");
+            stage.setWidth(700);
+            stage.setHeight(500);
+            stage.setResizable(false);
+            stage.getIcons().add(new Image("file:resources/palanca-de-mando.png"));
+            stage.setScene(scene);
+            stage.show();
         } catch (IOException e) {
             System.out.println("Error al abrir la ventana levels -->>  "+e.getMessage());
         }
@@ -101,11 +108,14 @@ public class Escalaneitor extends Application {
      */
     public void mostrarVentanaQuestions(Event event) {
         try {
-            Stage stage = new Stage();
+           
+                  
             Parent root = FXMLLoader.load(getClass().getResource("view/FXMLQuestionEasy.fxml"));
             Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+            Stage appStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            appStage.setScene(scene);
+            appStage.toFront();
+            appStage.show();
         } catch (IOException e) {
             System.out.println("Error al abrir la ventana Questions -->>  "+e.getMessage());
         }

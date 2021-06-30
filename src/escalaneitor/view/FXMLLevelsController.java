@@ -9,11 +9,13 @@ import escalaneitor.Escalaneitor;
 import escalaneitor.controller.FileLevels;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Control;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -41,6 +43,8 @@ public class FXMLLevelsController implements Initializable {
     public Button btnLevel13;
     public Button btnLevel14;
     public Button btnLevel15;
+    //public Panel panelFinal;
+    public Pane panelFinal;
     
     public String level;
     
@@ -54,6 +58,7 @@ public class FXMLLevelsController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         FileLevels txt = new FileLevels();
         level = txt.leerArchivo();
+        panelFinal.setVisible(false);
         pintarNiveles();
     }
     
@@ -64,6 +69,12 @@ public class FXMLLevelsController implements Initializable {
         if(btnAnswer.equals(level)){
             ProgramaPrincipal.mostrarVentanaQuestions(event);
         }
+    }
+    
+    @FXML
+    private void close(ActionEvent event) {
+        Platform.exit();
+        System.exit(0);
     }
     
     private void pintarNiveles(){
@@ -342,9 +353,11 @@ public class FXMLLevelsController implements Initializable {
                 btnLevel13.setStyle("-fx-background-image: url('file:resources/nivel13/check.png');");
                 btnLevel14.setStyle("-fx-background-image: url('file:resources/nivel14/check.png');");
                 btnLevel15.setStyle("-fx-background-image: url('file:resources/nivel15/check.png');");
+                panelFinal.setVisible(true);
                 break;
             default:
                 System.out.println("Error Nivel no coincide para pintar niveles");
+                panelFinal.setVisible(true);
                 break;
         }
     }
