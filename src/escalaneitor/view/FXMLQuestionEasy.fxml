@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" styleClass="bodybg-question" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="escalaneitor.view.FXMLQuestionEasyController">
+    <stylesheets>
+        <URL value="@styleApp.css" />
+    </stylesheets>
+   <children>
+      <Label fx:id="levelQ" layoutX="273.0" layoutY="14.0" prefHeight="52.0" prefWidth="182.0" text="Nivel 1" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="answer1" layoutX="167.0" layoutY="283.0" mnemonicParsing="false" onAction="#validaRespuesta" prefHeight="77.0" prefWidth="117.0" styleClass="button-question" text="44" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="answer2" layoutX="311.0" layoutY="283.0" mnemonicParsing="false" onAction="#validaRespuesta" prefHeight="77.0" prefWidth="117.0" styleClass="button-question" text="69" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="answer3" layoutX="452.0" layoutY="283.0" mnemonicParsing="false" onAction="#validaRespuesta" prefHeight="77.0" prefWidth="117.0" styleClass="button-question" text="62" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Button>
+      <Label id="question" fx:id="question" contentDisplay="CENTER" layoutX="88.0" layoutY="167.0" prefHeight="70.0" prefWidth="546.0" styleClass="label-question" text="(25 + 37) = ?" textFill="#1B0652">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="answerResult" contentDisplay="CENTER" layoutX="97.0" layoutY="108.0" prefHeight="42.0" prefWidth="546.0" styleClass="label-question" textFill="#3fa43f">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Button fx:id="answer11" layoutX="290.0" layoutY="413.0" mnemonicParsing="false" onAction="#cerrarVentana" prefHeight="40.0" prefWidth="148.0" styleClass="button-back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="volver" fitHeight="55.0" fitWidth="174.0" layoutX="512.0" layoutY="419.0" onMouseClicked="#volverNiveles" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../resources/b-volver.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

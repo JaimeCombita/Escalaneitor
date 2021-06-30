@@ -3,13 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor-main/src/escalaneitor/view/FXMLLevelsController.java</file>
-            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor-main/test/escalaneitor/controller/CalculateResultTest.java</file>
-            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor-main/test/escalaneitor/model/ModelQuestionHalfTest.java</file>
-            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor-main/test/escalaneitor/controller/GeneratorQuestionTest.java</file>
-            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor-main/test/escalaneitor/model/ModelQuestionEasyTest.java</file>
-            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor-main/test/escalaneitor/model/ModelQuestionHardTest.java</file>
-            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor-main/test/escalaneitor/niveles/NivelesTest.java</file>
+            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor/src/escalaneitor/view/FXMLQuestionEasy.fxml</file>
+            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor/src/escalaneitor/view/styleApp.css</file>
+            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor/src/escalaneitor/view/FXMLLevelsController.java</file>
+            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor/src/escalaneitor/view/FXMLQuestionEasyController.java</file>
+            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor/src/escalaneitor/view/FXMLHomeController.java</file>
+            <file>file:/C:/Users/jaicom025/Documents/NetBeansProjects/Escalaneitor/src/escalaneitor/Escalaneitor.java</file>
         </group>
     </open-files>
 </project-private>

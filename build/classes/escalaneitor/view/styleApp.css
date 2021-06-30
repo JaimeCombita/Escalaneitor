@@ -7,11 +7,55 @@
 }
 
 .bodybg{
-    -fx-background-image: url('file:resources/home.jpeg');
+    -fx-background-image: url('file:resources/fondo-juego.jpg');
     -fx-background-size: 100% 100%;
 }
 
-.bodyLevelsbg{
-    -fx-background-image: url('file:resources/levels.jpeg');
+.bodybg-question{
+    -fx-background-image: url('file:resources/fondo-pregunta.jpg');
     -fx-background-size: 100% 100%;
+}
+
+.button-question {
+    -fx-background-color: #1B0652;
+}
+
+.button-levels {
+    -fx-background-color: #1B0652;
+    -fx-background-size: 100% 100%;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+.button-home {
+  -fx-background-image: url('file:resources/boton-iniciar.png');
+  -fx-background-size: 100% 100%;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+.button-back {
+  -fx-background-image: url('file:resources/b-volver.png');
+  -fx-background-size: 100% 100%;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+.label-poli {
+  -fx-background-image: url('file:resources/Logo-Poli_Blanco.png');
+  -fx-background-size: 100% 100%;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+.label-name-game {
+  -fx-background-image: url('file:resources/logo-home.png');
+  -fx-background-size: 100% 100%;
+  -fx-background-repeat: no-repeat;
+  -fx-background-position: center;
+}
+
+.label-question {
+    -fx-alignment: center;
+    -fx-text-alignment: center;
 }
