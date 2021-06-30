@@ -57,7 +57,7 @@ public class Escalaneitor extends Application {
             stagePrincipal.setWidth(700);
             stagePrincipal.setHeight(500);
             stagePrincipal.setResizable(false);
-            stagePrincipal.getIcons().add(new Image("file:resources/icon-app.png"));
+            stagePrincipal.getIcons().add(new Image("file:resources/palanca-de-mando.png"));
             stagePrincipal.setScene(scene);
             FXMLHomeController controller = loader.getController();
             controller.setProgramaPrincipal(this);
